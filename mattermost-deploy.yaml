@@ -22,11 +22,20 @@ spec:
         name: mattermost
         env:
         - name: MM_USERNAME
-          value: myuser
+          valueFrom:
+            configMapKeyRef:
+              name: common-env
+              key: MYSQL_USER
         - name: MM_PASSWORD
-          value: mypassword
+          valueFrom:
+            configMapKeyRef:
+              name: common-env
+              key: MYSQL_PASSWORD
         - name: DB_NAME
-          value: mattermost
+          valueFrom:
+            configMapKeyRef:
+              name: common-env
+              key: MYSQL_DATABASE
         - name: DB_HOST
           value: ""
         resources: {}
