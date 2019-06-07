@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     targetPort: 3306
   selector:
-    app: mattermost-db
+    app: db
   type: ClusterIP
 status:
   loadBalancer: {}
