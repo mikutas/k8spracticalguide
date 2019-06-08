@@ -8,5 +8,5 @@ spec:
     http:
       paths:
       - backend:
-        serviceName: mattermost
-        servicePort: 8065
+          serviceName: mattermost
+          servicePort: 8065
