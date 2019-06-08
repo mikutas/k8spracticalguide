@@ -7,6 +7,6 @@ spec:
   - host: chat.$(minikube ip).nip.io
     http:
       paths:
-        - backend:
-          serviceName: mattermost
-          sercicePort: 8065
+      - backend:
+        serviceName: mattermost
+        servicePort: 8065
