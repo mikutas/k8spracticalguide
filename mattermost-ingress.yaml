@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: mattermost
+spec:
+  rules:
+  - host: chat.$(minikube ip).nip.io
+    http:
+      paths:
+        - backend:
+          serviceName: mattermost
+          sercicePort: 8065
