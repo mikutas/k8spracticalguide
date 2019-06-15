@@ -1,0 +1,11 @@
+apiversion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: backup-mysql
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: nfs
