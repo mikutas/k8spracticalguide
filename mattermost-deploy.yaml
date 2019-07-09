@@ -18,7 +18,7 @@ spec:
         app: mattermost
     spec:
       containers:
-      - image: k8spracticalguide/mattermost:4.10.2
+      - image: k8spracticalguide/mattermost:4.10.4
         name: mattermost
         env:
         - name: MM_USERNAME
