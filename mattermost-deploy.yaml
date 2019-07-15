@@ -49,6 +49,12 @@ spec:
         volumeMounts:
           - name: cm-volume
             mountPath: /mm/config
+        livenessProbe:
+          initialDelaySeconds: 90
+          timeoutSeconds: 5
+          httpGet:
+            path: /api/v4/system/ping
+            port: 8065
       volumes:
       - name: cm-volume
         configMap:
