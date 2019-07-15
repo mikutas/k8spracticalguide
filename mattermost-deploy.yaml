@@ -62,7 +62,8 @@ spec:
           periodSeconds: 15
           httpGet:
             path: /api/v4/system/ping
-            port:8065
+            port: 8065
+        resources: {}
       volumes:
       - name: cm-volume
         configMap:
