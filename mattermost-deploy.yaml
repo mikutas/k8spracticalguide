@@ -63,13 +63,16 @@ spec:
           httpGet:
             path: /api/v4/system/ping
             port: 8065
-        resources: {}
         lifecycle:
           preStop:
             exec:
               command:
               - sleep
               - 5s
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
       volumes:
       - name: cm-volume
         configMap:
