@@ -64,6 +64,12 @@ spec:
             path: /api/v4/system/ping
             port: 8065
         resources: {}
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - sleep
+              - 5s
       volumes:
       - name: cm-volume
         configMap:
