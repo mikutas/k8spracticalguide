@@ -52,9 +52,17 @@ spec:
         livenessProbe:
           initialDelaySeconds: 90
           timeoutSeconds: 5
+          periodSeconds: 15
           httpGet:
             path: /api/v4/system/ping
             port: 8065
+        readinessProbe:
+          initialDelaySeconds: 15
+          timeoutSeconds: 5
+          periodSeconds: 15
+          httpGet:
+            path: /api/v4/system/ping
+            port:8065
       volumes:
       - name: cm-volume
         configMap:
